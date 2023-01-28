@@ -15,7 +15,7 @@ function Navbar() {
           </div>
           <div className={styled.navbar__container__left__links}>
             <Link to={""}>Home</Link>
-            <a href="#2">Shop</a>
+            <Link to={"add"}>Create</Link>
             <a href="#3">Blog</a>
             <a href="#4">Pages</a>
             <a href="#5">Contact</a>

@@ -1,0 +1,48 @@
+.add {
+  margin-top: 80px;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  img {
+    position: absolute;
+    left: 100px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  &__container {
+    width: 400px;
+    height: 400px;
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      input {
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 255, 0.13);
+        padding: 10px 15px;
+        &:focus {
+          outline: none;
+          border: 1px solid rgba(0, 0, 255, 0.541);
+        }
+      }
+      button {
+        border-radius: 20px;
+        padding: 15px 25px;
+        background-color: #384aeb;
+        color: white;
+        font-size: 15px;
+        border: 1px solid #384aeb;
+        transition: 0.4s all;
+        &:hover {
+          background-color: transparent;
+          color: black;
+        }
+      }
+    }
+  }
+}

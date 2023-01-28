@@ -1,4 +1,5 @@
 import React from "react";
+import Add from "../pages/add";
 import Home from "../pages/home";
 import MainRoot from "../pages/MainRoot";
 
@@ -14,6 +15,10 @@ export const ROUTES = [
       {
         path: "home",
         element: <Home />,
+      },
+      {
+        path: "add",
+        element: <Add />,
       },
     ],
   },
