@@ -1,8 +1,59 @@
 .navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  height: 100px;
   &__container {
+    background-color: violet;
+    width: 1280px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     &__left {
+      width: 60%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      &__links {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        a {
+          font-size: 17px;
+          text-decoration: none;
+        }
+      }
     }
     &__right {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: center;
+      width: 40%;
+      gap: 60px;
+      &__icons {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        svg {
+          width: 15px !important;
+          height: 15px !important;
+        }
+      }
+      &__button {
+        margin-right: 10px;
+        button {
+          font-size: 17px;
+          font-weight: 400;
+          padding: 15px 30px;
+          border-radius: 20px;
+          background-color: transparent;
+          border: 0.1px solid grey;
+        }
+      }
     }
   }
 }
