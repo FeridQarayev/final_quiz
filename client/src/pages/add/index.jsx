@@ -32,7 +32,7 @@ function Add() {
             price: "",
           }}
           validationSchema={productSchema}
-          onSubmit={(values) => {
+          onSubmit={(values, { resetForm }) => {
             console.log(values);
             createProduct(values).then((res) => {
               if (res.status === 201) {
@@ -41,6 +41,7 @@ function Add() {
                 toast.error(res.data.message);
               }
             });
+            resetForm();
           }}
         >
           {({ errors, touched }) => (

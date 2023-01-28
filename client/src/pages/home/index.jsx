@@ -1,7 +1,15 @@
 import React from "react";
 import styled from "./home.module.scss";
+import { getAllProduct } from "../../service/getAllProduct";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function Home() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    getAllProduct().then((res) => setProducts(res.data));
+  }, []);
+  console.log(products);
   return (
     <div className={styled.home}>
       <div className={styled.home__up}>
@@ -43,181 +51,52 @@ function Home() {
             </h2>
           </div>
           <div className={styled.home__container__products__down}>
-            <div className={styled.home__container__products__down__card}>
-              <div
-                className={styled.home__container__products__down__card__img}
-              >
-                <img
-                  src="https://preview.colorlib.com/theme/aroma/img/product/product1.png"
-                  alt="wotch"
-                />
-              </div>
-              <div
-                className={styled.home__container__products__down__card__text}
-              >
+            {products.map((product) => {
+              return (
                 <div
-                  className={
-                    styled.home__container__products__down__card__text__up
-                  }
+                  key={product._id}
+                  className={styled.home__container__products__down__card}
                 >
-                  Accessories
+                  <div
+                    className={
+                      styled.home__container__products__down__card__img
+                    }
+                  >
+                    <img
+                      src="https://preview.colorlib.com/theme/aroma/img/product/product1.png"
+                      alt={product.name}
+                    />
+                  </div>
+                  <div
+                    className={
+                      styled.home__container__products__down__card__text
+                    }
+                  >
+                    <div
+                      className={
+                        styled.home__container__products__down__card__text__up
+                      }
+                    >
+                      {product.description}
+                    </div>
+                    <div
+                      className={
+                        styled.home__container__products__down__card__text__middle
+                      }
+                    >
+                      {product.name}
+                    </div>
+                    <div
+                      className={
+                        styled.home__container__products__down__card__text__down
+                      }
+                    >
+                      ${product.price}
+                    </div>
+                  </div>
                 </div>
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__middle
-                  }
-                >
-                  Quartz Belt Watch
-                </div>
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__down
-                  }
-                >
-                  $150.00
-                </div>
-              </div>
-            </div>
-            <div className={styled.home__container__products__down__card}>
-              <div
-                className={styled.home__container__products__down__card__img}
-              >
-                <img
-                  src="https://preview.colorlib.com/theme/aroma/img/product/product1.png"
-                  alt="wotch"
-                />
-              </div>
-              <div
-                className={styled.home__container__products__down__card__text}
-              >
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__up
-                  }
-                >
-                  Accessories
-                </div>
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__middle
-                  }
-                >
-                  Quartz Belt Watch
-                </div>
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__down
-                  }
-                >
-                  $150.00
-                </div>
-              </div>
-            </div>
-            <div className={styled.home__container__products__down__card}>
-              <div
-                className={styled.home__container__products__down__card__img}
-              >
-                <img
-                  src="https://preview.colorlib.com/theme/aroma/img/product/product1.png"
-                  alt="wotch"
-                />
-              </div>
-              <div
-                className={styled.home__container__products__down__card__text}
-              >
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__up
-                  }
-                >
-                  Accessories
-                </div>
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__middle
-                  }
-                >
-                  Quartz Belt Watch
-                </div>
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__down
-                  }
-                >
-                  $150.00
-                </div>
-              </div>
-            </div>
-            <div className={styled.home__container__products__down__card}>
-              <div
-                className={styled.home__container__products__down__card__img}
-              >
-                <img
-                  src="https://preview.colorlib.com/theme/aroma/img/product/product1.png"
-                  alt="wotch"
-                />
-              </div>
-              <div
-                className={styled.home__container__products__down__card__text}
-              >
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__up
-                  }
-                >
-                  Accessories
-                </div>
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__middle
-                  }
-                >
-                  Quartz Belt Watch
-                </div>
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__down
-                  }
-                >
-                  $150.00
-                </div>
-              </div>
-            </div>
-            <div className={styled.home__container__products__down__card}>
-              <div
-                className={styled.home__container__products__down__card__img}
-              >
-                <img
-                  src="https://preview.colorlib.com/theme/aroma/img/product/product1.png"
-                  alt="wotch"
-                />
-              </div>
-              <div
-                className={styled.home__container__products__down__card__text}
-              >
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__up
-                  }
-                >
-                  Accessories
-                </div>
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__middle
-                  }
-                >
-                  Quartz Belt Watch
-                </div>
-                <div
-                  className={
-                    styled.home__container__products__down__card__text__down
-                  }
-                >
-                  $150.00
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>

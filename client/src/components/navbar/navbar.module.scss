@@ -17,6 +17,9 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      &__logo {
+        cursor: pointer;
+      }
       &__links {
         display: flex;
         flex-direction: row;
@@ -25,6 +28,9 @@
           font-size: 17px;
           text-decoration: none;
           color: #777777;
+          &:hover {
+            color: blue;
+          }
         }
       }
     }
@@ -42,6 +48,7 @@
         svg {
           width: 15px !important;
           height: 15px !important;
+          cursor: pointer;
         }
       }
       &__button {
@@ -53,6 +60,10 @@
           border-radius: 20px;
           background-color: transparent;
           border: 0.1px solid grey;
+          cursor: pointer;
+          &:hover {
+            border: 1px solid blue;
+          }
         }
       }
     }
