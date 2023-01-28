@@ -90,6 +90,17 @@
             color: black;
           }
         }
+        &__search {
+          width: 300px;
+          margin-top: 20px;
+          border-radius: 10px;
+          border: 1px solid rgba(0, 0, 255, 0.13);
+          padding: 10px 15px;
+          &:focus {
+            outline: none;
+            border: 1px solid rgba(0, 0, 255, 0.541);
+          }
+        }
         p {
           color: #777777;
           font-size: 15px;

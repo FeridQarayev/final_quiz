@@ -7,6 +7,7 @@ import { useEffect } from "react";
 function Home() {
   const [products, setProducts] = useState([]);
   const [sort, setSort] = useState(false);
+  const [inpVal, setInpVal] = useState("");
 
   const Sorting = () => {
     setProducts(
@@ -66,54 +67,67 @@ function Home() {
             >
               Filter By Price
             </div>
+            <input
+              className={styled.home__container__products__title__search}
+              type="text"
+              placeholder="Search by Name"
+              onChange={(e) => setInpVal(e.target.value)}
+            />
           </div>
           <div className={styled.home__container__products__down}>
-            {products.map((product) => {
-              return (
-                <div
-                  key={product._id}
-                  className={styled.home__container__products__down__card}
-                >
+            {products
+              .filter((fill) => {
+                if (inpVal === "") return fill;
+                else if (fill.name.toLowerCase().includes(inpVal.toLowerCase()))
+                  return fill;
+              })
+
+              .map((product) => {
+                return (
                   <div
-                    className={
-                      styled.home__container__products__down__card__img
-                    }
-                  >
-                    <img
-                      src="https://preview.colorlib.com/theme/aroma/img/product/product1.png"
-                      alt={product.name}
-                    />
-                  </div>
-                  <div
-                    className={
-                      styled.home__container__products__down__card__text
-                    }
+                    key={product._id}
+                    className={styled.home__container__products__down__card}
                   >
                     <div
                       className={
-                        styled.home__container__products__down__card__text__up
+                        styled.home__container__products__down__card__img
                       }
                     >
-                      {product.description}
+                      <img
+                        src="https://preview.colorlib.com/theme/aroma/img/product/product1.png"
+                        alt={product.name}
+                      />
                     </div>
                     <div
                       className={
-                        styled.home__container__products__down__card__text__middle
+                        styled.home__container__products__down__card__text
                       }
                     >
-                      {product.name}
-                    </div>
-                    <div
-                      className={
-                        styled.home__container__products__down__card__text__down
-                      }
-                    >
-                      ${product.price}
+                      <div
+                        className={
+                          styled.home__container__products__down__card__text__up
+                        }
+                      >
+                        {product.description}
+                      </div>
+                      <div
+                        className={
+                          styled.home__container__products__down__card__text__middle
+                        }
+                      >
+                        {product.name}
+                      </div>
+                      <div
+                        className={
+                          styled.home__container__products__down__card__text__down
+                        }
+                      >
+                        ${product.price}
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
           </div>
         </div>
       </div>
