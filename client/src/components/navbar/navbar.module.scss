@@ -4,7 +4,7 @@
   justify-content: center;
   height: 100px;
   &__container {
-    background-color: violet;
+    // background-color: violet;
     width: 1280px;
     font-size: 15px;
     display: flex;
@@ -24,6 +24,7 @@
         a {
           font-size: 17px;
           text-decoration: none;
+          color: #777777;
         }
       }
     }
