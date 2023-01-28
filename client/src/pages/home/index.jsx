@@ -6,10 +6,21 @@ import { useEffect } from "react";
 
 function Home() {
   const [products, setProducts] = useState([]);
+  const [sort, setSort] = useState(false);
+
+  const Sorting = () => {
+    setProducts(
+      [...products].sort((a, b) =>
+        sort ? (a.price > b.price ? 1 : -1) : a.price < b.price ? 1 : -1
+      )
+    );
+
+    setSort(!sort);
+  };
   useEffect(() => {
     getAllProduct().then((res) => setProducts(res.data));
   }, []);
-  console.log(products);
+
   return (
     <div className={styled.home}>
       <div className={styled.home__up}>
@@ -49,6 +60,12 @@ function Home() {
             <h2>
               Trending <span>Product</span>
             </h2>
+            <div
+              onClick={() => Sorting()}
+              className={styled.home__container__products__title__filter}
+            >
+              Filter By Price
+            </div>
           </div>
           <div className={styled.home__container__products__down}>
             {products.map((product) => {
