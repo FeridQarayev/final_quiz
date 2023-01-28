@@ -4,6 +4,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { createProduct } from "../../service/createProduct";
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const productSchema = Yup.object().shape({
   name: Yup.string()
@@ -72,6 +73,10 @@ function Add() {
         </Formik>
       </div>
       <Toaster />
+      <Helmet>
+        <title>Create Product</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
     </div>
   );
 }

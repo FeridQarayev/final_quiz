@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "./home.module.scss";
 import { getAllProduct } from "../../service/getAllProduct";
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -462,6 +463,10 @@ function Home() {
           </div>
         </div>
       </div>
+      <Helmet>
+        <title>Home Page</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
     </div>
   );
 }
