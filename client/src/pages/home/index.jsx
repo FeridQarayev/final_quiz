@@ -93,6 +93,58 @@ function Home() {
         </div>
       </div>
     </div>
+
+
+    <div className={styled.home__container}>
+      <div className={styled.home__container__products}>
+        <div className={styled.home__container__products__title}>
+          <p>Popular Item in the market</p>
+          <h2>Best  <span>Sellers</span></h2>
+        </div>
+        <div className={styled.home__container__products__down}>
+          <div className={styled.home__container__products__down__card}>
+            <div className={styled.home__container__products__down__card__img}>
+              <img src="https://preview.colorlib.com/theme/aroma/img/product/product1.png" alt="wotch" />
+            </div>
+            <div className={styled.home__container__products__down__card__text}>
+              <div className={styled.home__container__products__down__card__text__up}>Accessories</div>
+              <div className={styled.home__container__products__down__card__text__middle}>Quartz Belt Watch</div>
+              <div className={styled.home__container__products__down__card__text__down}>$150.00</div>
+            </div>
+          </div>
+          <div className={styled.home__container__products__down__card}>
+            <div className={styled.home__container__products__down__card__img}>
+              <img src="https://preview.colorlib.com/theme/aroma/img/product/product2.png" alt="wotch" />
+            </div>
+            <div className={styled.home__container__products__down__card__text}>
+              <div className={styled.home__container__products__down__card__text__up}>Beauty</div>
+              <div className={styled.home__container__products__down__card__text__middle}>Women Freshwash</div>
+              <div className={styled.home__container__products__down__card__text__down}>$150.00</div>
+            </div>
+          </div>
+          <div className={styled.home__container__products__down__card}>
+            <div className={styled.home__container__products__down__card__img}>
+              <img src="https://preview.colorlib.com/theme/aroma/img/product/product3.png" alt="wotch" />
+            </div>
+            <div className={styled.home__container__products__down__card__text}>
+              <div className={styled.home__container__products__down__card__text__up}>Decor</div>
+              <div className={styled.home__container__products__down__card__text__middle}>Room Flash Light</div>
+              <div className={styled.home__container__products__down__card__text__down}>$150.00</div>
+            </div>
+          </div>
+          <div className={styled.home__container__products__down__card}>
+            <div className={styled.home__container__products__down__card__img}>
+              <img src="https://preview.colorlib.com/theme/aroma/img/product/product4.png" alt="wotch" />
+            </div>
+            <div className={styled.home__container__products__down__card__text}>
+              <div className={styled.home__container__products__down__card__text__up}>Decor</div>
+              <div className={styled.home__container__products__down__card__text__middle}>Room Flash Light</div>
+              <div className={styled.home__container__products__down__card__text__down}>$150.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>;
 }
 
