@@ -82,6 +82,17 @@ function Home() {
         </div>
       </div>
     </div>
+
+    <div className={styled.home__sale}>
+      <div className={styled.home__sale__container}>
+        <div className={styled.home__sale__container__text}>
+          <h3>Up To 50% Off</h3>
+          <h4>Winter Sale</h4>
+          <p>Him she'd let them sixth saw light</p>
+          <button>Shop Now</button>
+        </div>
+      </div>
+    </div>
   </div>;
 }
 
